@@ -7,7 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // title = 'Aula01';
-  nome = "Bettina"
-  idade = 22
-  saldo = 1042000
+  nome = "Michel";
+  idade = 21;
+
+    salvar(){
+      // this.nome = nomeInput;
+      // this.nome = "Michel " + this.idade;
+      // this.idade++;
+    }
+
+    mudar(event:any){
+      this.nome = event.target.value;
+    }
 }
