@@ -1,0 +1,33 @@
+<!-- Michel de Melo Vieira - 389959 -->
+<div class="container-fluid">
+  <div class="alert alert-{{alerta}}" role="alert" [hidden]="escondido">
+      <span [style.color]="(negativo)?'red':'black'">{{resultado}}</span>
+  </div>
+  <br/>
+  <div class="container-fluid">
+    <div class="form-row align-items-center">
+      <div class="col-auto">
+        <label  for="inlineFormInput">Dia</label>
+        <input type="text" class="form-control mb-2" id="Dia" placeholder="Dia" #InputDia>
+      </div>
+      <div class="col-auto">
+        <label  for="inlineFormInput">Mes</label>
+        <input type="text" class="form-control mb-2" id="Mes" placeholder="Mes" #InputMes>
+      </div>
+      <div class="col-auto">
+        <label  for="inlineFormInput">Ano</label>
+        <input type="text" class="form-control mb-2" id="Ano" placeholder="Ano" #InputAno>
+      </div>
+      <div class="col-auto">
+        <label  for="inlineFormInputGroup">Investimento</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">R$</div>
+          </div>
+          <input type="text" class="form-control" id="Investir" placeholder="investimento" #InputInvest>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary" (click)="iBettMyMoney(InputDia.value, InputMes.value, InputAno.value, InputInvest.value)">Investir</button>
+  </div>
+</div>
