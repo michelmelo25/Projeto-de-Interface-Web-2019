@@ -8,9 +8,20 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   nome = "Michel de Melo Vieira";
+  clicou = false;
+  pessoas = [];
+  contador = 0;
 
   salvar(nomeInput:string){
     this.nome = nomeInput;
+    this.clicou = true;
+    this.pessoas.push(
+      {
+        nome: this.nome, 
+        id:this.contador
+      }
+    );
+    this.contador++;
   }
 
   mudar(event:any){

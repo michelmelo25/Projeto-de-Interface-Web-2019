@@ -4,21 +4,15 @@ import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello/hello.component';
-import { HeadComponent } from './head/head.component';
-import { BodyComponent } from './body/body.component';
-import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from  '@ng-bootstrap/ng-bootstrap';
 import { DatepickerPopupComponent } from './datepicker-popup/datepicker-popup.component';
+import { PessoaCardComponent } from './pessoa-card/pessoa-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    HeadComponent,
-    BodyComponent,
-    FooterComponent,
-    DatepickerPopupComponent
+    DatepickerPopupComponent,
+    PessoaCardComponent
   ],
   imports: [
     BrowserModule,
