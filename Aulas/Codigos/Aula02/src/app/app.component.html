@@ -1,0 +1,11 @@
+<div class="container">
+
+  <app-pessoa-form (pessoaSalva)="salvarPessoa($event)"></app-pessoa-form>
+
+  <div class="row" style="margin-top: 1em;">
+    <div class="col-2" *ngFor="let pessoa of pessoas">
+      <app-pessoa-card [pessoa]="pessoa"></app-pessoa-card>
+    </div>
+  </div>
+
+</div>

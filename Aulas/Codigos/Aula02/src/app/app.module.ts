@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from  '@ng-bootstrap/ng-bootstrap';
 import { DatepickerPopupComponent } from './datepicker-popup/datepicker-popup.component';
 import { PessoaCardComponent } from './pessoa-card/pessoa-card.component';
+import { PessoaFormComponent } from './pessoa-form/pessoa-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatepickerPopupComponent,
-    PessoaCardComponent
+    PessoaCardComponent,
+    PessoaFormComponent
   ],
   imports: [
     BrowserModule,
