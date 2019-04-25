@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <div class="alert alert-{{alerta}}" role="alert" style="margin-top: 1em">
+    <h1>o número <span [style.color]="cor">{{mensagem}}</span></h1>
+  </div>
+  <input type="text" #InputValor style="margin-top: 1em"> <br/>
+  <button type="button" class="btn btn-outline-primary" style="margin-top: 1em" (click)="verificar(InputValor.value)">Verificar</button>
+</div>

@@ -1,0 +1,21 @@
+<h1 style="text-align: center">Questão 01</h1>
+<hr>
+<app-questao01></app-questao01>
+<hr>
+<h1 style="text-align: center">Questão 02</h1>
+<hr>
+<app-questao02></app-questao02>
+<hr>
+<h1 style="text-align: center">Questão 03</h1>
+<hr>
+<app-questao03></app-questao03>
+<hr>
+<h1 style="text-align: center">Questão 04</h1>
+<hr>
+<app-questao04 (salvar)="salvarPessoa($event)"></app-questao04>
+<ol style="margin-top: 1em">
+  <li class="list-group-item" [ngClass]="getClass(pessoa)" *ngFor="let pessoa of pessoas" style="max-width: 20%">IMC: {{pessoa.imc}} - {{pessoa.resultado}}</li>
+</ol>
+<footer style="margin: 1em">
+  <h1>Michel de Melo Vieira - 389959</h1>
+</footer>
