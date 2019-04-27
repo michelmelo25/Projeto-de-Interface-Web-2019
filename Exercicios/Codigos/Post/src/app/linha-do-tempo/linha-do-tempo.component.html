@@ -1,3 +1,23 @@
-<p>
-  linha-do-tempo works!
-</p>
+<div class="form-group">
+  <div class="row">
+    <div class="col-1"><label for="usua">Nome:</label></div>
+    <div class="col-11">
+      <input type="text" name="" id="" class="form-control" #inputNome>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-12">
+      <textarea class="form-control" #inputTexto></textarea>
+    </div>
+  </div>
+  <br>
+  <button type= "button" class="btn btn-primary" (click)="enviar(inputNome.value, inputTexto.value)" style="margin-top: 1em; margin-bottom: 1em"> Enviar </button>
+  
+
+  <div class="row" *ngFor= "let p of posts">
+    <div class="col-12">
+      <app-post-da-linha [post] = "p" (id)="findPost($event)"></app-post-da-linha>
+    </div>
+  </div>
+</div>
