@@ -1,0 +1,36 @@
+{
+  "alunos": [
+    {
+      "id": 0,
+      "nome": "Michel"
+    },
+    {
+      "id": 1,
+      "nome": "Lucas"
+    },
+    {
+      "id": 2,
+      "nome": "Joyce"
+    },
+    {
+      "id": 3,
+      "nome": "Barbara"
+    },
+    {
+      "id": 4,
+      "nome": "Paulo"
+    },
+    {
+      "id": 5,
+      "nome": "Ronildo"
+    },
+    {
+      "id": 6,
+      "nome": "Leo"
+    },
+    {
+      "nome": "Marcelo",
+      "id": 7
+    }
+  ]
+}
