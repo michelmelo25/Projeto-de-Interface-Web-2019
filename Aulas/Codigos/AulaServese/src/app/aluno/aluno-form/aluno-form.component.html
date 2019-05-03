@@ -5,7 +5,24 @@
   </div>
   <button class="btn btn-primary" 
     (click)="adicionar(nomeInput.value);nomeInput.value=''">Adicionar</button>
+  <hr>  
+  <p>Busca</p>
+  <div class="row">
+    <div class="col-2">ID</div>
+    <div class="col-8"><input type="text" class="form-control" #nomePesqInput></div>
+    <div class="col-2"><button class="btn btn-primary" 
+      (click)="consultar(nomePesqInput.value);nomePesqInput.value=''">Pesquisar</button></div>
+  </div>
   <hr>
+  <div class="row" [hidden]="pesq">
+    <div class="col-2">ID</div>
+    <div class="col-8">Nome</div>
+  </div>
+  <div class="row">
+    <div class="col-2">{{ aluno.id }}</div>
+    <div class="col-8">{{ aluno.nome }}</div>
+  </div>
+  <hr>  
   <div class="row">
     <div class="col-2">ID</div>
     <div class="col-8">Nome</div>
@@ -16,10 +33,10 @@
   <div class="row mt-2" 
        *ngFor="let a of alunos">
     <div class="col-2">{{a.id}}</div>
-    <div class="col-8">
+    <div class="col-7">
       <input type="text" value="{{a.nome}}" class="form-control" #nomeUpdate>
     </div>
-    <div class="col-2">
+    <div class="col-3">
 
       <div class="row">
         <div class="col-6">
@@ -34,6 +51,4 @@
 
     </div>
   </div>
-
-  
 </div>

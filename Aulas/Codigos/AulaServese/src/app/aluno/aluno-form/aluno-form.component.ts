@@ -11,6 +11,8 @@ import { AlunoService } from './../../servise/aluno.service';
 export class AlunoFormComponent {
 
   alunos:Aluno[] = [];
+  aluno:Aluno;
+  pesq = true;
 
   constructor(private alunoServise: AlunoService){ this.listar(); }
 
@@ -21,7 +23,9 @@ export class AlunoFormComponent {
   }
 
   atualizar(aluno:Aluno){
-    this.alunoServise.atualizar(aluno);
+    this.alunoServise.atualizar(aluno).subscribe(
+      (res:Aluno) => { console.log(`atualizado ${res.nome} com id ${res.id}`); this.listar}
+    );
   }
 
   listar(){
@@ -36,7 +40,9 @@ export class AlunoFormComponent {
     );
   }
 
-  consultar(id:number):Aluno{
-    return this.alunoServise.consultar(id);
+  consultar(id:number){
+    this.alunoServise.consultar(id).subscribe(
+      (res:Aluno) => { this.aluno = res; this.pesq = false}
+    );
   }
 }

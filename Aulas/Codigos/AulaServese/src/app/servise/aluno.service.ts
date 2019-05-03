@@ -16,6 +16,7 @@ export class AlunoService {
   }
 
   atualizar(aluno:Aluno){
+    return this.http.put(this.url+`/${aluno.id}`,aluno);
   }
 
   listar(){
@@ -27,6 +28,6 @@ export class AlunoService {
   }
 
   consultar(id:number){
-    return null;
+    return this.http.get(this.url+`/${id}`);
   }
 }
