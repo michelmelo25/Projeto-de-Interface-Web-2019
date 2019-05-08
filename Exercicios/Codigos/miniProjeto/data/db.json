@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "login": "shell",
+      "firstName": "Michel",
+      "lastName": "Melo",
+      "email": "michelmelo@mail.com",
+      "zipcode": "25398000",
+      "password": "alucard",
+      "id": 1
+    },
+    {
+      "login": "roda",
+      "firstName": "Marcelo",
+      "lastName": "Pereira",
+      "email": "roda@mail.com",
+      "zipcode": "11111000",
+      "password": "rodama",
+      "id": 2
+    }
+  ]
+}
