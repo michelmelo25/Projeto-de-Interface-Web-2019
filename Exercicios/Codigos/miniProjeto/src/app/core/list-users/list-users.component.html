@@ -12,7 +12,7 @@
       <th scope='row'>{{user.id}}</th>
       <td>{{user.firstName}}</td>
       <td align='right'>
-        <button class='btn btn-primary'>Edit</button>
+        <button class='btn btn-primary' (click)="edit(user.id)">Edit</button>
         <button class='btn btn-danger ml-3' (click)="delete(user.id)">Delete</button>
       </td>
     </tr>

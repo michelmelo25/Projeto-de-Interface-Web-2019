@@ -22,4 +22,8 @@ export class UserService {
   delete(id:number){
     return this.httpCliente.delete(this.url+`/${id}`);
   }
+
+  update(user:User){
+    // return this.httpCliente.put(`${this.url}/`);
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { UserService } from './../../servises/user.service';
 
@@ -11,7 +12,7 @@ export class ListUsersComponent implements OnInit {
 
   users:User[];
 
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService, private router:Route) {
     this.users = [];
    }
 
@@ -29,6 +30,10 @@ export class ListUsersComponent implements OnInit {
     this.userService.delete(id).subscribe(
       (res:any) => {this.list()}
     );
+  }
+
+  edit(id:number){
+      // this.router.navigate(['edit/user',id])
   }
 
 }
