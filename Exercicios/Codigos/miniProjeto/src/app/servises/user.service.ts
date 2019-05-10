@@ -18,4 +18,8 @@ export class UserService {
   list(){
     return this.httpCliente.get(this.url); //retorna um observavel
   }
+
+  delete(id:number){
+    return this.httpCliente.delete(this.url+`/${id}`);
+  }
 }

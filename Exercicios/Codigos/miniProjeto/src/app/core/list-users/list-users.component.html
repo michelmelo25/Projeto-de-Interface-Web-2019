@@ -13,7 +13,7 @@
       <td>{{user.firstName}}</td>
       <td align='right'>
         <button class='btn btn-primary'>Edit</button>
-        <button class='btn btn-danger ml-3'>Delete</button>
+        <button class='btn btn-danger ml-3' (click)="delete(user.id)">Delete</button>
       </td>
     </tr>
   </tbody>

@@ -25,4 +25,10 @@ export class ListUsersComponent implements OnInit {
     );
   }
 
+  delete(id:number){
+    this.userService.delete(id).subscribe(
+      (res:any) => {this.list()}
+    );
+  }
+
 }
