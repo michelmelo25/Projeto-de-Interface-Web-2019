@@ -12,6 +12,10 @@ export class UserService {
   constructor(private httpCliente:HttpClient) { }
 
   register(user:User){
-    return this.httpCliente.post(this.url,user);
+    return this.httpCliente.post(this.url,user); //retorna um observavel
+  }
+
+  list(){
+    return this.httpCliente.get(this.url); //retorna um observavel
   }
 }
