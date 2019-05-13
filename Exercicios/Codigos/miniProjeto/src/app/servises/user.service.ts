@@ -23,7 +23,11 @@ export class UserService {
     return this.httpCliente.delete(this.url+`/${id}`);
   }
 
+  get(id:number){
+    return this.httpCliente.get(`${this.url}/${id}`);
+  }
+
   update(user:User){
-    // return this.httpCliente.put(`${this.url}/`);
+    return this.httpCliente.put(`${this.url}/${user.id}`,user);
   }
 }

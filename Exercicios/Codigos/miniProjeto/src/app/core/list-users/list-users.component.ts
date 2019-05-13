@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route } from '@angular/router';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { UserService } from './../../servises/user.service';
 
@@ -12,7 +12,7 @@ export class ListUsersComponent implements OnInit {
 
   users:User[];
 
-  constructor(private userService:UserService, private router:Route) {
+  constructor(private userService:UserService, private router:Router) {
     this.users = [];
    }
 
@@ -33,7 +33,7 @@ export class ListUsersComponent implements OnInit {
   }
 
   edit(id:number){
-      // this.router.navigate(['edit/user',id])
+      this.router.navigate(['edit/user',id])
   }
 
 }

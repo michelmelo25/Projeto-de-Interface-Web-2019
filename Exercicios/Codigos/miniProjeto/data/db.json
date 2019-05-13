@@ -17,6 +17,15 @@
       "zipcode": "11111000",
       "password": "rodama",
       "id": 2
+    },
+    {
+      "login": "rtur",
+      "firstName": "Ryan",
+      "lastName": "Tur",
+      "email": "ryans@mail.com",
+      "zipcode": "11111000",
+      "password": "turdoryan",
+      "id": 3
     }
   ]
 }
