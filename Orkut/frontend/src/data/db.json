@@ -1,0 +1,28 @@
+{
+    "users":[
+       { "id": 1,
+        "nome": "Michel",
+        "sobrenome": "Melo",
+        "login": "sehll",
+        "email": "michel@mail.com",
+        "senha": "123",
+        "avatar": " ",
+        "posts": [
+            {
+                "texto":"ola",
+                "altor": "Michel",
+                "dataPostagem": "14-05-2019",
+                "dataEdit": "",
+                "likes": 0
+            },
+            {
+                "texto":"ola",
+                "altor": "Michel",
+                "dataPostagem": "14-05-2019",
+                "dataEdit": "",
+                "likes": 0
+            }
+        ]
+       }
+    ]
+}

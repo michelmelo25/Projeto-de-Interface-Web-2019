@@ -24,7 +24,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./open-iconic-master/font/css/open-iconic-bootstrap.css",
+              "./open-iconic-master/font/css/open-iconic-bootstrap.scss",
+              "./open-iconic-master/font/css/open-iconic-bootstrap.styl"
             ],
             "scripts": [],
             "es5BrowserSupport": true
