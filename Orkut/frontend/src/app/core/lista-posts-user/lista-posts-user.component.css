@@ -1,7 +1,12 @@
 label{
-    font-size: 14px
+    font-size: 13px
 }
 
-button{
-    font-size: 15px
+.size{
+    font-size: 13px;
+}
+
+.alin{
+    font-size: 14px;
+    text-align: left
 }

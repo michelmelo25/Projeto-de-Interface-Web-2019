@@ -16,7 +16,7 @@ const routes:Routes = [
   {path:'',component:PostUserComponent},
   {path:'login',component:LoginUserComponent},
   {path:'cadastro',component:CadastroUserComponent},
-  {path:'perfil',component:TimeLineUserComponent}
+  {path:'timeline',component:TimeLineUserComponent}
   // {path:'edit/user/:id',component:EditUserComponent}
 ];
 

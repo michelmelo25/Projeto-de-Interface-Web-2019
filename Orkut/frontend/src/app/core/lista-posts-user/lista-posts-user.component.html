@@ -1,9 +1,15 @@
 <br/>
 <div class="card" *ngFor="let post of posts">
   <div class="card-body" >
-    <label><span class="oi oi-person"></span> {{post.altor}}</label> 
-    <h5>{{post.texto}}</h5>
-    <label><span class="oi oi-thumb-up"></span> {{post.likes}}</label><br/>
-    <button type="button" class="btn btn-outline-primary" (click)="like()" ><span class="oi oi-thumb-up"></span></button>
+    <!-- <label><span class="oi oi-person"></span> {{post.altor}}</label>  -->
+    <h5 >{{post.texto}}</h5>
+    <div class="alin">
+      <label><span class="oi oi-thumb-up"></span> {{post.likes}} </label>
+      <label style="float: right"><span class="oi oi-person">{{post.altor}}</span> </label> 
+    </div>
+    <div class="alin">
+      <button type="button" class="btn btn-outline-primary size" (click)="like()" ><span class="oi oi-thumb-up"></span></button>
+      <span class="oi oi-calendar" style="float: right">{{post.dataPostagem}}</span>
+    </div>
   </div>
 </div>

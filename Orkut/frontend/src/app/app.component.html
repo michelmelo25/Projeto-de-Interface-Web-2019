@@ -1,19 +1,18 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
   <div class="navbar-nav">
-    <a class="nav-item nav-link" routerLink='/'>Home</a>
+    <a class="nav-item nav-link" routerLink='/'><span class="oi oi-home"></span></a>
     <a class="nav-item nav-link" routerLink='/cadastro'>Cadstro</a>
     <a class="nav-item nav-link" routerLink='/login'>Login</a>
-    <a class="nav-item nav-link" routerLink='/perfil'>Perfil</a>
+    <a class="nav-item nav-link" routerLink='/timeline'>Time Line</a>
   </div>
 </nav>
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <div class="container">
     <div class="row">
       <div class="col-sm-6 offset-sm-3">
-        <!-- <app-cadastro-user></app-cadastro-user> -->
-        <!-- <app-list-users></app-list-users> -->
         <router-outlet></router-outlet>
       </div>
     </div>
   </div>
-</div>
+</div> -->
+<router-outlet></router-outlet>
