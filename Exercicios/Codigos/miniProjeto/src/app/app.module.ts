@@ -8,10 +8,11 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterUserComponent } from './core/register-user/register-user.component';
 import { ListUsersComponent } from './core/list-users/list-users.component';
-import { EditUserComponent } from './edit-user/edit-user.component';
+import { EditUserComponent } from './core/edit-user/edit-user.component';
+import { LoginUserComponent } from './core/login-user/login-user.component';
 
 const routes:Routes = [
-  {path:'',component:RegisterUserComponent},
+  {path:'',component:LoginUserComponent},
   {path:'list/user',component:ListUsersComponent},
   {path:'register/user',component:RegisterUserComponent},
   {path:'edit/user/:id',component:EditUserComponent}

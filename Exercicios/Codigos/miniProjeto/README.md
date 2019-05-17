@@ -3,9 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
 ## Dependencias
-`npm install bootstrap` <br/>
+`npm install bootstrap --save` <br/>
 `npm install -g json-server`<br/>
-`npm install ngx-toastr`
+`npm install ngx-toastr --save`
 
 ### Execucao servidor json
 `son-server --watch data/db.json`
