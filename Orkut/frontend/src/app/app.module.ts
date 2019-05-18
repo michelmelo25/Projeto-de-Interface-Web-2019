@@ -11,9 +11,10 @@ import { LoginUserComponent } from './core/login-user/login-user.component';
 import { CadastroUserComponent } from './core/cadastro-user/cadastro-user.component';
 import { PostUserComponent } from './core/post-user/post-user.component';
 import { TimeLineUserComponent } from './core/time-line-user/time-line-user.component';
+import { HomeComponent } from './core/home/home.component';
 
 const routes:Routes = [
-  {path:'',component:PostUserComponent},
+  {path:'',component:HomeComponent},
   {path:'login',component:LoginUserComponent},
   {path:'cadastro',component:CadastroUserComponent},
   {path:'timeline',component:TimeLineUserComponent}
