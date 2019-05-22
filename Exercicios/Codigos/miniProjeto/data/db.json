@@ -27,5 +27,31 @@
       "password": "turdoryan",
       "id": 3
     }
+  ],
+  "products": [
+    {
+      "name": "Leite",
+      "price": 4,
+      "qtd": 5,
+      "id": 1
+    },
+    {
+      "price": 8,
+      "name": "Leite em po",
+      "qtd": 9,
+      "id": 2
+    },
+    {
+      "name": "Queijo",
+      "price": 10,
+      "qtd": 5,
+      "id": 3
+    },
+    {
+      "name": "Margarina",
+      "price": 2,
+      "qtd": 2,
+      "id": 4
+    }
   ]
 }

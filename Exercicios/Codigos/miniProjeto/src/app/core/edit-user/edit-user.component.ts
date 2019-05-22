@@ -28,7 +28,7 @@ export class EditUserComponent implements OnInit {
       (res:User) => {
         console.log(`${res.firstName} updated.`); 
         this.user = new User();
-        this.router.navigate(['']);
+        this.router.navigate(['list/user']);
       }
     );
   }

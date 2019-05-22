@@ -6,10 +6,13 @@ import { ListUsersComponent } from './list-users/list-users.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { LoginUserComponent } from './login-user/login-user.component';
 import { ToastrModule } from 'ngx-toastr';
+import { RegisterProductComponent } from './register-product/register-product.component';
+import { ListProductComponent } from './list-product/list-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 @NgModule({
-  declarations: [RegisterUserComponent, ListUsersComponent, EditUserComponent, LoginUserComponent],
-  exports: [RegisterUserComponent, ListUsersComponent, EditUserComponent, LoginUserComponent],
+  declarations: [RegisterUserComponent, ListUsersComponent, EditUserComponent, LoginUserComponent, RegisterProductComponent, ListProductComponent, EditProductComponent],
+  exports: [RegisterUserComponent, ListUsersComponent, EditUserComponent, LoginUserComponent, RegisterProductComponent],
   imports: [
     CommonModule,
     FormsModule,
