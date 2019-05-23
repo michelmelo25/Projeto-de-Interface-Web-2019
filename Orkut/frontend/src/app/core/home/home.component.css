@@ -11,3 +11,14 @@ table{
     height: auto;
     margin-top: 3px;
 }
+
+.container_amigos{
+    max-width: 50%; 
+    float: left;
+}
+
+.redirect{
+    font-size: 13px;
+    float: right;
+    color: darkblue;
+}
