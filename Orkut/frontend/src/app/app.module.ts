@@ -12,12 +12,14 @@ import { CadastroUserComponent } from './core/cadastro-user/cadastro-user.compon
 import { PostUserComponent } from './core/post-user/post-user.component';
 import { TimeLineUserComponent } from './core/time-line-user/time-line-user.component';
 import { HomeComponent } from './core/home/home.component';
+import { PerfilComponent } from './core/perfil/perfil.component';
 
 const routes:Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginUserComponent},
   {path:'cadastro',component:CadastroUserComponent},
-  {path:'timeline',component:TimeLineUserComponent}
+  {path:'timeline',component:TimeLineUserComponent},
+  {path:'perfil',component:PerfilComponent}
   // {path:'edit/user/:id',component:EditUserComponent}
 ];
 

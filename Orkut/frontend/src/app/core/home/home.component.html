@@ -2,21 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-2">
-        <div class="card">
-          <div class="card-body">
-            <img src="https://randomuser.me/api/portraits/men/1.jpg" class="mr-3 card-img-top">
-            <hr />
-            <label>Michel de Melo Vieira</label>
-            <hr />
-            <ul class="list-group">
-              <a class="list-group-item list-group-item-action list-group-item-secondary">Amigos</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary">Perfil</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary">Recados</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary">Fotos</a>
-              <a class="list-group-item list-group-item-action list-group-item-secondary">Videos</a>
-            </ul>
-          </div>
-        </div>
+        <app-coluna-perfil></app-coluna-perfil>
       </div>
       <div class="col-sm-7">
         <div class="card">
@@ -97,8 +83,8 @@
       <div class="col-sm-3">
         <div class="row">
             <div class="card">
-                <div class="card-body" style="">
-                  <h5 class="card-title">Amigos (50)</h5>
+                <div class="card-body">
+                  <h5 class="card-title">Meus Amigos (50)</h5>
                   <div class="container">                    
                     <div class="card container_amigos" align="center">
                         <img src="https://randomuser.me/api/portraits/men/2.jpg" class="card-img-top">
@@ -116,13 +102,38 @@
                       <img src="https://randomuser.me/api/portraits/men/5.jpg" class="card-img-top">
                       <label class="card-title">Pedro</label>
                     </div>
-                    <a class="redirect">Ver mais amigos ></a>
+                    <button type="button" class="btn btn-link redirect">Ver mais amigos ></button>
+                    <!-- <a class="redirect">Ver mais amigos ></a> -->
                   </div>              
                 </div>
             </div>
         </div>
         <div class="row">
-          
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Minhas Comunidades (50)</h5>
+              <div class="container">                    
+                <div class="card container_amigos" align="center">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" class="card-img-top">
+                    <label class="card-title">Pedro</label>
+                </div>
+                <div class="card container_amigos" align="center">
+                  <img src="https://randomuser.me/api/portraits/men/3.jpg" class="card-img-top">
+                  <label class="card-title">Pedro</label>
+                </div>
+                <div class="card container_amigos" align="center">
+                  <img src="https://randomuser.me/api/portraits/men/4.jpg" class="card-img-top">
+                  <label class="card-title">Pedro</label>
+                </div>
+                <div class="card container_amigos" align="center">
+                  <img src="https://randomuser.me/api/portraits/men/5.jpg" class="card-img-top">
+                  <label class="card-title">Pedro</label>
+                </div>
+                <button type="button" class="btn btn-link redirect">Ver mais comunidades ></button>
+                <!-- <a class="redirect">Ver mais amigos ></a> -->
+              </div>              
+            </div>
+          </div>
         </div>
       </div>
     </div>
