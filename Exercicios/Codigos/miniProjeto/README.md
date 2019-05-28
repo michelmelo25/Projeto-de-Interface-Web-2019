@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 `npm install ngx-toastr --save`
 
 ### Execucao servidor json
-`son-server --watch data/db.json`
+`json-server --watch data/db.json`
 
 ## Development server
 
