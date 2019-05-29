@@ -6,7 +6,7 @@
         "login": "sehll",
         "email": "michel@mail.com",
         "senha": "123",
-        "avatar": " ",
+        "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
         "posts": [
             {
                 "texto":"ola",
@@ -23,6 +23,37 @@
                 "likes": 0
             }
         ]
+       },{
+        "id": 2,
+        "nome": "Eduardo",
+        "sobrenome": "Firmino",
+        "login": "edu",
+        "email": "edu@mail.com",
+        "senha": "edu123",
+        "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+        "posts":[]
        }
+    ],
+    "fotos":[
+
+    ],
+    "comunidade":[
+        
+    ],
+    "categoria": [
+
+    ],
+    "forum":[
+
+    ],
+    "mensagem":[
+        
+    ],
+    "amigo":[
+        {
+            "id":1,
+            "id_user": 1,
+            "id_amigo": 2
+        }
     ]
 }

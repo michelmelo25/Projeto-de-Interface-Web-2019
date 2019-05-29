@@ -8,32 +8,32 @@ import { Post } from '../models/post';
 })
 export class UserService {
 
-  url:string = 'http://localhost:3000/users';
+  url:string = 'http://localhost:3000';
 
   constructor(private httpCliente:HttpClient) { }
 
   register(user:User){
-    return this.httpCliente.post(this.url,user); //retorna um observavel
+    return this.httpCliente.post(`${this.url}/users`,user); //retorna um observavel
   }
 
   list(){
-    return this.httpCliente.get(this.url); //retorna um observavel
+    return this.httpCliente.get(`${this.url}/users`); //retorna um observavel
   }
 
   delete(id:number){
-    return this.httpCliente.delete(this.url+`/${id}`);
+    return this.httpCliente.delete(`${this.url}/users/${id}`);
   }
 
   get(id:number){
-    return this.httpCliente.get(`${this.url}/${id}`);
+    return this.httpCliente.get(`${this.url}/users/${id}`);
   }
 
   update(user:User){
-    return this.httpCliente.put(`${this.url}/${user.id}`,user);
+    return this.httpCliente.put(`${this.url}/users/${user.id}`,user);
   }
 
   login(email:string){
-    return this.httpCliente.get(`${this.url}/?email=${email}`);
+    return this.httpCliente.get(`${this.url}/users/?email=${email}`);
   }
 
   registerPost(post:Post, id:number){
