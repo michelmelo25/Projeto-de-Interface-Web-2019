@@ -29,22 +29,22 @@ export class ListProductComponent implements OnInit {
     );
   }
 
-  delete(id:number){
+  delete(_id:any){
     if(!confirm("Are you sure?")){
       return;
     } 
     
-    this.productService.delete(id).subscribe(
+    this.productService.delete(_id).subscribe(
       (res:any)=>{
-        console.log(`Product id ${id} deleted!`);
+        console.log(`Product id ${_id} deleted!`);
         this.list();
       }
     );
   }
 
-  edit(id:number){
+  edit(_id:any){
     //nevegação imperativa
-    this.router.navigate(['edit/product',id]);
+    this.router.navigate(['edit/product',_id]);
   }
 
 }

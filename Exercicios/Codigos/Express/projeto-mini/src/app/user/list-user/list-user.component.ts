@@ -29,22 +29,22 @@ export class ListUserComponent implements OnInit {
     );
   }
 
-  delete(id:number){
+  delete(_id:any){
     if(!confirm("Are you sure?")){
       return;
     } 
     
-    this.userService.delete(id).subscribe(
+    this.userService.delete(_id).subscribe(
       (res:any)=>{
-        console.log(`User id ${id} deleted!`);
+        console.log(`User id ${_id} deleted!`);
         this.list();
       }
     );
   }
 
-  edit(id:number){
+  edit(_id:any){
     //nevegação imperativa
-    this.router.navigate(['edit/user',id]);
+    this.router.navigate(['edit/user',_id]);
   }
 
 }

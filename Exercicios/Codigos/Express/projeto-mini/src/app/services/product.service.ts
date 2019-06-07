@@ -12,22 +12,22 @@ export class ProductService {
   constructor(private httpClient:HttpClient) { }
 
   register(prod:Product){
-    return this.httpClient.post(this.url,prod);  
+    return this.httpClient.post(`${this.url}/register`,prod);  
   }
 
   list(){
-    return this.httpClient.get(this.url);  
+    return this.httpClient.get(`${this.url}/list`);  
   }
 
-  delete(id:number){
-    return this.httpClient.delete(`${this.url}/${id}`);
+  delete(id:any){
+    return this.httpClient.delete(`${this.url}/delete/${id}`);
   }
 
-  retrieveById(id:number){
-    return this.httpClient.get(`${this.url}/${id}`);
+  retrieveById(_id:any){
+    return this.httpClient.get(`${this.url}/retrieve/${_id}`);
   }
 
   update(prod:Product){
-    return this.httpClient.put(`${this.url}/${prod.id}`,prod);
+    return this.httpClient.put(`${this.url}/update/${prod._id}`,prod);
   }
 }

@@ -23,12 +23,12 @@ export class UserService {
     return this.httpClient.get<User[]>(`${this.url}/list`); //express 
   }
 
-  delete(id:number){
+  delete(id:any){
     //return this.httpClient.delete(`${this.url}/${id}`); //json-server
     return this.httpClient.delete(`${this.url}/delete/${id}`); //express
   }
 
-  retrieveById(id:number):Observable<User>{
+  retrieveById(id:any):Observable<User>{
     //return this.httpClient.get<User>(`${this.url}/${id}`); //json-server
     return this.httpClient.get<User>(`${this.url}/retrieve/${id}`); //express
   }

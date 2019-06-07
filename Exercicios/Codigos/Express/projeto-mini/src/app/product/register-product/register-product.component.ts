@@ -30,7 +30,7 @@ export class RegisterProductComponent implements OnInit {
     }
     this.productService.register(this.product).subscribe(
       (res:Product)=>{
-        console.log(`Produc id ${res.id} added!`)
+        console.log(`Produc id ${res._id} added!`)
         this.router.navigate(["list/product"]);
       }
     );
