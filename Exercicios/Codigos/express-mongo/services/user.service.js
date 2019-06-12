@@ -1,54 +1,67 @@
-const UserModel = require('../models/user.model');
+const UserModel = require("../models/user.model");
 
-class UserService{
+let users = [];
+let id = 0;
 
-    static register(req,res){
-        UserModel.create(req.body).then(
-            (user)=>{
-                res.status(201).json(user);
+class UserService {
+
+    static register(data) {
+        let user = new UserModel(id++, data.firstName, data.lastName, data.login,
+            data.email, data.zipcode, data.password);
+        users.push(user);
+        return user;
+    }
+
+    static list() {
+        return users;
+    }
+
+    static update(id, data) {
+        for (let u of users) {
+            if (u.id == id) {
+                u.firstName = data.firstName;
+                u.lastName = data.lastName;
+                u.login = data.login;
+                u.zipcode = data.zipcode;
+                u.password = data.password;
+                u.email = data.email;
+                return u;
             }
-        )
-    };
+        }
+        return null;
+    }
 
-    static list(req,res){
-        UserModel.find().then(
-            (users)=>{
-                res.status(201).json(users);
-            }
-        );    
-    };
+    static delete(id) {
 
-    static update(req,res){
-        UserModel.findByIdAndUpdate(req.params.id, req.body, {'new':true}).then(
-            (user)=>{
-                res.status(201).json(user);
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].id == id) {
+                users.splice(i, 1);
+                return true;
             }
-        );
-    };
+        }
+        return false;
+    }
 
-    static delete(req,res){
-        UserModel.findByIdAndRemove(req.params.id).then(
-            (user)=>{
-                res.status(201).json(user);
-            }
-        );
-    };
+    static retrieve(id) {
 
-    static retrieve(req,res){
-        UserModel.findById(req.params.id).then(
-            (user)=>{
-                res.status(201).json(user);
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].id == id) {
+                return users[i];
             }
-        );
-    };
+        }
+        return {};
+    }
 
-    static retrieveByLogin(req,res){
-        UserModel.find({'login':req.params.login}).then(
-            (user)=>{
-                res.status(201).json(user);
+    static retrieveByLogin(login){
+        
+        for( let i = 0; i < users.length; i++){ 
+            if(users[i].login == login){
+                return [users[i]];
             }
-        );
-    };
+        }
+        return [];
+    }
+
 }
 
 module.exports = UserService;
