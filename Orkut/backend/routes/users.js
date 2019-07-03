@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/register', function(req, res) {
-  console.log(req.body)
+  // console.log(req.body)
   var user = userServise.register(req.body);
   res.json(user);
 });

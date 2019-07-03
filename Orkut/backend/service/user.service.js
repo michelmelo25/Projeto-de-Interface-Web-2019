@@ -1,25 +1,107 @@
 const UserModel = require('../models/user.models');
-const admin = require('firebase-admin');
-// const functions = require('firebase-functions');
-
-// admin.initializeApp(functions.config().firebase);
-admin.initializeApp({
-    credential: admin.credential.applicationDefault()
-  });
-
-var db = admin.firestore();
-
-id = 0;
 
 class UserService{
-    static register(data) {
-        let user = new UserModel(id, data.firstName, data.lastName, data.login,
-            data.email, data.zipcode, data.password,data.avatar, data.amigos);
-        // var usuarios = db.collection('users');
-        // usuarios.
-        var usuario = db.collection('users').doc('usuarios').set(user);
-        id++;
-        return usuario;
+    static register(req,res){
+        UserModel.find({'login':req.params.login}).then(
+            (user) => {
+                res.status(500).json('Usuario existente');
+            }
+        ).catch(
+            (error) => {
+                UserModel.create(req.body).then(
+                    (user)=>{
+                        res.status(201).json(user);
+                    }
+                ).catch(
+                    (error)=>{
+                        res.status(500).json(error);
+                    }
+                );
+            }
+        );
+
+        
     }
+
+    static list(req,res){
+        UserModel.find().then(
+            (users)=>{
+                res.status(201).json(users);
+            }
+        ).catch(
+            (error)=>{
+                res.status(500).json(error);
+            }
+        );    
+    }
+
+    static update(req,res){
+        UserModel.findByIdAndUpdate(req.params.id, req.body, {'new':true}).then(
+            (user)=>{
+                res.status(201).json(user);
+            }
+        ).catch(
+            (error)=>{
+                res.status(500).json(error);
+            }
+        );
+    }
+
+    static delete(req,res){
+        UserModel.findByIdAndRemove(req.params.id).then(
+            (user)=>{
+                res.status(201).json(user);
+            }
+        ).catch(
+            (error)=>{
+                res.status(500).json(error);
+            }
+        );
+    }
+
+    static retrieve(req,res){
+        UserModel.findById(req.params.id).then(
+            (user)=>{
+                res.status(201).json(user);
+            }
+        ).catch(
+            (error)=>{
+                res.status(500).json(error);
+            }
+        );
+    }
+
+    static retrieveByLogin(req,res){
+        UserModel.find({'login':req.params.login}).then(
+            (user)=>{
+                res.status(201).json(user);
+            }
+        ).catch(
+            (error)=>{
+                res.status(500).json(error);
+            }
+        );
+    }
+
+    static retiveFriends(req,res){
+        UserModel.find({'login':req.params.login}).then(
+            (user)=>{
+                UserModel.find({'login':{'$in':user.amigos}}).then(
+                    (users) => {
+                        res.status(201).json(users);
+                    }
+                ).catch(
+                    (error) => {
+                        res.status(500).json(error);
+                    }
+                )
+            }
+        ).catch(
+            (error)=>{
+                res.status(500).json(error);
+            }
+        );
+    }
+
 }
 module.exports = UserService;
